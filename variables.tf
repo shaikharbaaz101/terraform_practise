@@ -15,5 +15,5 @@ variable "instancetype" {
 
 variable "instancename" {
     type = string
-    default = "testing_variable"
+    default = "test_ui"
 }
