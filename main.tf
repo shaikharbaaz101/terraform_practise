@@ -1,21 +1,13 @@
-resource "aws_instance" "example_server" { 
-  ami           = var.ami_id_1
-  instance_type = var.instancetype
-
-  tags = { 
-    Name = var.instancename
-  } 
-
+// prod
+module "webserver_module_prod" {
+  source = "./modules/webserver"
+  instancetype = "t2.large"
+  instancename = "prod_webserver"
 }
 
-
-resource "aws_instance" "example_server_1" { 
-  ami           = var.ami_id_2
-  instance_type = var.instancetype
-
-  tags = { 
-    Name = var.instancename
-
-  } 
-
-} 
+// dev
+module "webserver_module_dev" {
+  source = "./modules/webserver"
+  instancetype = "t2.medium"
+  instancename = "dev_webserver"
+}

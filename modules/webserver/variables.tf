@@ -3,11 +3,6 @@ variable "ami_id_1" {
     default = "ami-00bb6a80f01f03502"
 }
 
-variable "ami_id_2" {
-    type = string
-    default = "ami-00bb6a80f01f03502"
-}
-
 variable "instancetype" {
     type = string
     default = "t2.micro"
@@ -15,5 +10,5 @@ variable "instancetype" {
 
 variable "instancename" {
     type = string
-    default = "test_ui"
+    default = "webserver"
 }
